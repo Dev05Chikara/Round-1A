@@ -1,4 +1,3 @@
-
 import os
 import json
 from utils import extract_title_and_headings
@@ -7,7 +6,9 @@ INPUT_DIR = "/app/input"
 OUTPUT_DIR = "/app/output"
 
 def main():
-    os.makedirs(OUTPUT_DIR, exist_ok=True)
+    os.makedirs(INPUT_DIR, exist_ok=True)   
+    os.makedirs(OUTPUT_DIR, exist_ok=True)  
+
     for file in os.listdir(INPUT_DIR):
         if file.endswith(".pdf"):
             pdf_path = os.path.join(INPUT_DIR, file)
